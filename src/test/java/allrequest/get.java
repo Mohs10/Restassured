@@ -36,7 +36,9 @@ public class get {
 		    .get("https://reqres.in/api/users?page=2")
 		 
 		 .then()  //. is used becoz we r accessing it from given 
-		 
+		 .header("Content-Type","application/json; charset=utf-8")
+			.and()
+			.header("Content-Encoding","gzip")
               .statusCode(200)
 		     .body("page",equalTo(2)) //here we r validating the body of the response 
 		      .log().all();  //it display the resonse 
