@@ -30,12 +30,7 @@ public class DDTest {
 		Assert.assertEquals(response.getStatusCode(), 200);
 	}
 	
-	//@Test(priority=2, dataProvider="UserName", dataProviderClass=DataProviders.class )
-	public void testgetUserbyName(String userName)
-	{
-		Response response=Userendpoints.readUser(userName);
-		Assert.assertEquals(response.getStatusCode(), 200);
-	}
+	
 	
 	@Test(priority=2, dataProvider="UserName", dataProviderClass=DataProviders.class )
 	public void testDeleteUserbyName(String userName)
